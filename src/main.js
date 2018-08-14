@@ -5,15 +5,15 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import routers from './routers'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 const router = new VueRouter({
     mode: 'history',
     routes: routers
-})
+});
 
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
