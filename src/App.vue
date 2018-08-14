@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <router-link to="/HelloWorld">跳转到详情页111</router-link>
+        <router-link to="/HelloWorld">跳转到详情页</router-link>
         <router-view></router-view>
     </div>
 </template>
