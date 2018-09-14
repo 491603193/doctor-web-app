@@ -12,31 +12,31 @@
             </div>
         </section>
         <section class="main-option">
-            <div class="main-else">
+            <div class="main-else" @click="openVuex">
                 <img src="../../../static/img/mainicon1.png">
                 <router-link to='/HelloWorld'>
-                <p class="main-message">我的客户</p>
+                <p class="main-message">vueX</p>
                 </router-link>
             </div>
-            <div class="main-else">
+            <div class="main-else" @click="validate">
                 <img src="../../../static/img/mainicon2.png">
                 <router-link to='/HelloWorld'>
-                    <p class="main-message">客户咨询</p>
+                    <p class="main-message">表单验证</p>
                 </router-link>
             </div>
-            <div class="main-else" >
+            <div class="main-else" @click="axios">
                 <img src="../../../static/img/mainicon3.png">
                 <router-link to='/HelloWorld'>
-                    <p class="main-message">个人中心</p>
+                    <p class="main-message">异步</p>
                 </router-link>
             </div>
         </section>
-        <footer class="main-footer"></footer>
+        {{$store.state.dialog.show}}
+        <footer class="main-footer" v-show="$store.state.dialog.show"></footer>
     </div>
 </template>
 
 <script>
-    import {getlocalStorage} from '../../components/ht.js';
     // 引入header.vue组件
     export default {
         name: 'index',
@@ -53,6 +53,15 @@
         methods: {
             openCenter () {
                 this.$router.push({path:'/center'});//其中login是你定义的一个路由模块
+            },
+            openVuex () {
+                this.$router.push({path:'/vuex'});//其中login是你定义的一个路由模块
+            },
+            validate () {
+                this.$router.push({path:'/validate'});//其中login是你定义的一个路由模块
+            },
+            axios () {
+                this.$router.push({path:'/axios'});//其中login是你定义的一个路由模块
             }
         }
     }
