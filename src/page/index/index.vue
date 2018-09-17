@@ -12,25 +12,42 @@
             </div>
         </section>
         <section class="main-option">
-            <div class="main-else" @click="openVuex">
+
+            <div class="main-else">
+                <router-link to='/vuex'>
                 <img src="../../../static/img/mainicon1.png">
-                <router-link to='/HelloWorld'>
                 <p class="main-message">vueX</p>
                 </router-link>
             </div>
-            <div class="main-else" @click="validate">
+
+            <div class="main-else">
+                <router-link to='/validate'>
                 <img src="../../../static/img/mainicon2.png">
-                <router-link to='/HelloWorld'>
                     <p class="main-message">表单验证</p>
                 </router-link>
             </div>
-            <div class="main-else" @click="axios">
+            <div class="main-else">
+                <router-link to='/veeAxios'>
                 <img src="../../../static/img/mainicon3.png">
-                <router-link to='/HelloWorld'>
                     <p class="main-message">异步</p>
                 </router-link>
             </div>
+            <div class="main-else">
+                <router-link to='/transition'>
+                <img src="../../../static/img/mainicon1.png">
+                    <p class="main-message">vue动画</p>
+                </router-link>
+            </div>
+            <div class="main-else">
+                <img src="../../../static/img/mainicon2.png">
+                <p class="main-message">表单验证</p>
+            </div>
+            <div class="main-else">
+                <img src="../../../static/img/mainicon3.png">
+                <p class="main-message">异步</p>
+            </div>
         </section>
+
         {{$store.state.dialog.show}}
         <footer class="main-footer" v-show="$store.state.dialog.show"></footer>
     </div>
@@ -53,15 +70,6 @@
         methods: {
             openCenter () {
                 this.$router.push({path:'/center'});//其中login是你定义的一个路由模块
-            },
-            openVuex () {
-                this.$router.push({path:'/vuex'});//其中login是你定义的一个路由模块
-            },
-            validate () {
-                this.$router.push({path:'/validate'});//其中login是你定义的一个路由模块
-            },
-            axios () {
-                this.$router.push({path:'/axios'});//其中login是你定义的一个路由模块
             }
         }
     }

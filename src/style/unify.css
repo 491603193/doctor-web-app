@@ -123,14 +123,14 @@ textarea:focus {
 /* index_frm */
 .main-head {
   width: 100%;
-  height: 174px;
+  height: 74px;
   background-image: url('../../static/img/mainbackground.jpg');
   background-size: 100% 100%;
   background-position: center center;
 }
 .main-head-line {
   width: 100%;
-  height: 136.5px;
+  height: 100px;
   background-image: url('../../static/img/mainline.png');
   background-size: 100% 100%;
   background-position: center center;
@@ -160,12 +160,12 @@ textarea:focus {
   margin: 10px auto;
 }
 .main-name {
-  margin-top: 3px;
+  margin-top: 2px;
   font-size: 17px;
   color: #333;
 }
 .main-position {
-  margin-top: 6px;
+  margin-top: 2px;
   font-size: 14px;
   color: #999;
 }

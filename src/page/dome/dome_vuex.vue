@@ -1,6 +1,15 @@
 <template>
     <div>
         <app_header/>
+        <div>  ------------------过滤器-----------------------  </div>
+
+        <input  v-model="width"/><br/>
+        局部过滤{{  $store.state.dialog.size.width | capitalize }}
+        全局过滤{{  $store.state.dialog.size.width | updateCapital }}
+        <!-- 在 `v-bind` 中 -->
+        <div v-bind:id="width | capitalize"></div>
+
+        <div> ------------------数据管理-----------------------  </div>
         <button @click="goBack">返回</button>
         <input  v-model="high"/><br/>
         <button @click="$store.commit('change_dialog',{high:10})">high大小=10</button><br/>
@@ -38,11 +47,26 @@
                     : this.$router.push('/')
             }
         },
+        filters: {
+            capitalize: function (value) {
+                if (!value) return '无';
+                value = value.toString();
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
+        },
         components:{
             "t-dialog":dialog,
             app_header
         },
-        computed:{
+        computed: {
+            width: {
+                get () {
+                    return this.$store.state.dialog.size.width
+                },
+                set (value) {
+                    this.$store.commit('width_dialog',value)
+                }
+            },
             high: {
                 get () {
                     return this.$store.state.dialog.size.high

@@ -20,11 +20,27 @@ const config = {
 };
 Vue.use(VeeValidate, config); //一般插件都要use一下
 Vue.use(VueRouter);
+
+VueRouter.prototype.goBack = function () {
+    this.isBack = true;
+    window.history.go(-1)
+}
+
 const router = new VueRouter({
     // mode: 'history',
     routes: routers
 });
 Vue.config.productionTip = false;
+
+//全家过滤器  转成大写
+Vue.filter('updateCapital', function (value) {
+    if (!value) return '无';
+    value = value.toString();
+    return value.toUpperCase();
+});
+
+
+
 new Vue({
     render: h => h(App),
     router,

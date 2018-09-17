@@ -1,8 +1,9 @@
 export default {
-    state:{
-        show:false,
-        size:{
-            high:1
+    state: {
+        show: false,
+        size: {
+            high: 1,
+            width: 0
         }
     },
     getters:{
@@ -11,6 +12,10 @@ export default {
         }
     },
     mutations:{
+        width_dialog(state,width){//这里的state对应着上面这个state
+            state.size.width = width;
+            //你还可以在这里执行其他的操作改变state
+        },
         switch_dialog(state){//这里的state对应着上面这个state
             state.show = !state.show;
             //你还可以在这里执行其他的操作改变state
