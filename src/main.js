@@ -7,18 +7,18 @@ import VeeValidate from 'vee-validate';
 import axios from 'axios' // 1、在这里引入axios
 
 Vue.prototype.$axios = axios;   // 2、在vue中使用axios
-
-const config = {
-    errorBagName: 'errors',
-    fieldsBagName: 'fields',
-    delay: 100,
-    locale: 'zh_CN',
-    strict: true,
-    enableAutoClasses: true,
-    events: 'blur',
-    inject: true
-};
-Vue.use(VeeValidate, config); //一般插件都要use一下
+Vue.use(VeeValidate);
+// const config = {
+//     errorBagName: 'errors',
+//     fieldsBagName: 'fields',
+//     delay: 100,
+//     locale: 'zh_CN',
+//     strict: true,
+//     enableAutoClasses: true,
+//     events: 'blur',
+//     inject: true
+// };
+// Vue.use(VeeValidate, config); //一般插件都要use一下
 Vue.use(VueRouter);
 
 VueRouter.prototype.goBack = function () {

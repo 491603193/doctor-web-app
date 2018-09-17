@@ -77,7 +77,7 @@
             },
             //这里的三点叫做 : 扩展运算符
             ...mapState({
-                show:state=>state.dialog.show
+                show: state=>state.dialog.show
             }),
             // ...mapActions({
             //     add:'switch_dialog', // 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`
