@@ -18,7 +18,6 @@
 
                 input.onchange = event => {
                     let file = event.target.files[0];
-                    alert(file);
                     console.log(file);
                 }
                 input.click()

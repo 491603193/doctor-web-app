@@ -4,9 +4,9 @@ import store from './store'
 import VueRouter from 'vue-router'
 import routers from './config/routers'
 import VeeValidate from 'vee-validate';
-import axios from 'axios' // 1、在这里引入axios
+// import axios from 'axios' // 1、在这里引入axios
 
-Vue.prototype.$axios = axios;   // 2、在vue中使用axios
+// Vue.prototype.$axios = axios;   // 2、在vue中使用axios
 Vue.use(VeeValidate);
 // const config = {
 //     errorBagName: 'errors',
@@ -27,7 +27,7 @@ VueRouter.prototype.goBack = function () {
 }
 
 const router = new VueRouter({
-    // mode: 'history',
+    mode: 'history',
     routes: routers
 });
 Vue.config.productionTip = false;

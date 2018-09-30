@@ -39,15 +39,16 @@
                 </router-link>
             </div>
             <div class="main-else">
+                <router-link to='/routerPage'>
                 <img src="../../../static/img/mainicon2.png">
-                <p class="main-message">表单验证</p>
+                <p class="main-message">路由</p>
+                </router-link>
             </div>
             <div class="main-else">
                 <img src="../../../static/img/mainicon3.png">
                 <p class="main-message">异步</p>
             </div>
         </section>
-
         {{$store.state.dialog.show}}
         <footer class="main-footer" v-show="$store.state.dialog.show"></footer>
     </div>

@@ -4,6 +4,7 @@
             <div class="header my-title-header">
                 <span class="iconfont bfx-icon-fanhui" onclick="api.closeWin()"></span>个人中心</div>
         </header>
+
         <section class="my-section">
             <ul class="my-options">
                 <li class="my-option">
@@ -29,6 +30,7 @@
 <script>
     // 引入header.vue组件
     export default {
+
     }
 
 
